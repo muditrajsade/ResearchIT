@@ -1,0 +1,37 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Home Page</title>
+</head>
+<body>
+    <h1>Welcome to My Flask App!</h1>
+    <p>This is the homepage.</p>
+
+    <form id="queryForm">
+        <input type="text" id="queryInput" name="query" />
+        <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      const form = document.getElementById('queryForm');
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault(); // prevent default form submit
+        
+        const queryText = document.getElementById('queryInput').value;
+        
+        const response = await fetch('/find_similar', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query_text: queryText })
+        });
+        
+        const data = await response.json();
+        console.log('Response:', data);
+
+        // You can update the page here based on response
+      });
+    </script>
+</body>
+</html>
