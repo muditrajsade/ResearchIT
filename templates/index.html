@@ -21,7 +21,7 @@
         
         const queryText = document.getElementById('queryInput').value;
         
-        const response = await fetch('/find_similar', {
+        const response = await fetch('/specter_search', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ query_text: queryText })
