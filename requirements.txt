@@ -39,7 +39,7 @@ Jinja2==3.1.6
 jmespath==1.0.1
 joblib==1.5.1
 kagglehub==0.3.12
-keras==2.15.0
+keras==3.10.0
 kiwisolver==1.4.8
 libclang==18.1.1
 Markdown==3.8
@@ -47,7 +47,7 @@ markdown-it-py==3.0.0
 MarkupSafe==3.0.2
 matplotlib==3.10.3
 mdurl==0.1.2
-ml-dtypes==0.2.0
+ml_dtypes==0.5.1
 mpmath==1.3.0
 namex==0.0.9
 networkx==3.4.2
@@ -84,9 +84,9 @@ sentence-transformers==4.1.0
 six==1.17.0
 sniffio==1.3.1
 sympy==1.14.0
-tensorboard==2.15.2
+tensorboard==2.19.0
 tensorboard-data-server==0.7.2
-tensorflow==2.15.0
+tensorflow==2.19.0
 tensorflow-estimator==2.15.0
 tensorflow-io-gcs-filesystem==0.37.1
 tensorflow-macos==2.15.0
