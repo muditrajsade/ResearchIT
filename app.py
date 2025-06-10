@@ -2,6 +2,7 @@ import pandas as pd
 from flask import Flask, request, jsonify, render_template
 from flask_cors import CORS
 
+import logging
 import numpy as np
 from sentence_transformers import SentenceTransformer
 from qdrant_client import QdrantClient
