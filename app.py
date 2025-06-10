@@ -86,7 +86,11 @@ def setup_specter_model():
 
 
 specter_model, specter_tokenizer = setup_specter_model()
-specter_client = QdrantClient(url=SPECTER_QDRANT_URL, api_key=SPECTER_QDRANT_API_KEY, timeout=120)
+specter_client = QdrantClient(
+    url=SPECTER_QDRANT_URL, 
+    api_key=SPECTER_QDRANT_API_KEY, 
+    timeout=120
+)
 
 
 @app.route('/specter_search', methods=['POST'])
