@@ -15,6 +15,17 @@ from adapters import AutoAdapterModel
 import time
 from functools import wraps
 # paste here
+# Your existing Qdrant configuration
+QDRANT_URL = "https://ba0f9774-1b9e-4b0b-bb05-db8fadfe122c.eu-west-2-0.aws.cloud.qdrant.io"
+QDRANT_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.sMVFQwd_dg3z89uIih5r5olFlbXLAjl_Gcx0V5IJG-U"
+COLLECTION_NAME = "arxiv_papers_titles"
+
+SPECTER_COLLECTION = "arxiv_specter2_recommendations"
+SPECTER_QDRANT_URL = "https://d09a5111-2452-49a5-b3f8-6a488ca728da.us-east-1-0.aws.cloud.qdrant.io"
+SPECTER_QDRANT_API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2Nlc3MiOiJtIn0.4xolrSNFliLnWhb7i1Tw1CMbs2pPWJjKu-RgOlQGZTI"
+
+# Initialize Groq client
+
 # Initialize models and clients (unchanged)
 model = SentenceTransformer('sentence-transformers/all-MiniLM-L6-v2')
 client = QdrantClient(url=QDRANT_URL, api_key=QDRANT_API_KEY, timeout=60)
